@@ -172,11 +172,7 @@ def color_frame_pipeline(frames, solid_lines=True, temporal_smoothing=True):
         lane.draw(line_img)
 
     # keep only region of interest by masking
-    vertices = np.array([[(50, img_h),
-                          (450, 310),
-                          (490, 310),
-                          (img_w - 50, img_h)]],
-                        dtype=np.int32)
+    vertices = np.array([[(50, img_h),(450, 310),(490, 310),(img_w - 50, img_h)]],dtype=np.int32)
     img_masked, _ = region_of_interest(line_img, vertices)
 
     # make blend on color image

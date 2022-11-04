@@ -4,6 +4,7 @@ import os
 from os.path import join, basename
 from collections import deque
 from lane_detection import color_frame_pipeline
+import numpy
 
 
 if __name__ == '__main__':
